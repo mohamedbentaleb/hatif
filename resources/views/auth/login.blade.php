@@ -1,5 +1,4 @@
-<x-guest-layout>
-    <x-auth-card>
+<x-app-layout>
         <x-slot name="logo">
             <a href="/">
                 <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
@@ -12,45 +11,34 @@
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
+    <section class="login py-5 border-top-1">
+        <div class="container">
+            <div class="row justify-content-center">
+            <div class="col-lg-5 col-md-8 align-item-center">
+                <div class="border">
+                <h3 class="bg-gray p-4">Login Now</h3>
+                <form method="POST" action="{{ route('login') }}">
+                    @csrf
+                    <fieldset class="p-4">
+                    <input class="form-control mb-3" type="text" placeholder="Username" required>
+                    <input class="form-control mb-3" id="password" type="password" name="password" placeholder="Password" required autocomplete="current-password">
+                    <div class="loggedin-forgot">
+                        <input for="remember_me" type="checkbox" id="keep-me-logged-in" name="remember">
+                        <label for="keep-me-logged-in" class="pt-3 pb-2" id="remember_me">{{ __('Remember me') }}</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary font-weight-bold mt-3">Log in</button>
+                    @if (Route::has('password.request'))
+                    <a class="mt-3 d-block text-primary" href="{{ route('password.request') }}">Forget Password?</a>
+                    @endif
+                    <a class="mt-3 d-inline-block text-primary" href="{{ route('register') }}">Register Now</a>
 
-            <!-- Email Address -->
-            <div>
-                <x-label for="email" :value="__('Email')" />
-
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+                    </fieldset>
+                </form>
+                </div>
             </div>
-
-            <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
-
-                <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="current-password" />
             </div>
+        </div>
+    </section>
+</x-app-layout>
 
-            <!-- Remember Me -->
-            <div class="block mt-4">
-                <label for="remember_me" class="inline-flex items-center">
-                    <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                </label>
-            </div>
 
-            <div class="flex items-center justify-end mt-4">
-                @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
-                @endif
-
-                <x-button class="ml-3">
-                    {{ __('Log in') }}
-                </x-button>
-            </div>
-        </form>
-    </x-auth-card>
-</x-guest-layout>
