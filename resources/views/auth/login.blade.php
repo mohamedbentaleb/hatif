@@ -20,7 +20,7 @@
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
                     <fieldset class="p-4">
-                    <input class="form-control mb-3" type="text" placeholder="Username" required>
+                    <input class="form-control mb-3"  type="email" name="email" :value="old('email')" placeholder="Email" required autofocus>
                     <input class="form-control mb-3" id="password" type="password" name="password" placeholder="Password" required autocomplete="current-password">
                     <div class="loggedin-forgot">
                         <input for="remember_me" type="checkbox" id="keep-me-logged-in" name="remember">
