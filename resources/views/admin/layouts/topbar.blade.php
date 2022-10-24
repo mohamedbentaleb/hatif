@@ -91,7 +91,7 @@
           </li>
           <li>
 
-            <form method="POST" action="{{ route('logout') }}">
+            <form method="POST" action="{{ route('members.logout') }}">
               @csrf
               <button type="submit" class="dropdown-item"><i class="bx bx-power-off me-2"></i> {{ __('Log Out') }}</button>
             </form>

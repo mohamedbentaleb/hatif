@@ -34,7 +34,7 @@ Route::middleware('guest:members')->group(function () {
                 ->name('members.password.update');
 });
 
-Route::middleware('auth')->group(function () {
+Route::middleware('IsMember')->group(function () {
     Route::get('/admin/members/verify-email', [EmailVerificationPromptController::class, '__invoke'])
                 ->name('members.verification.notice');
 
