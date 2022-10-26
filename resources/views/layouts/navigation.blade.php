@@ -77,7 +77,15 @@
 						</ul>
 						<ul class="navbar-nav ml-auto mt-10">
 							<li class="nav-item">
-                                <a href="{{ route('login') }}" class="nav-link login-button">Log in</a>
+                                
+								@auth
+									<form method="POST" action="{{ route('logout') }}">
+										@csrf
+										<button type="submit" class="nav-link login-button">{{ __('Log Out') }}</button>
+									</form>
+								@else
+									<a href="{{ route('login') }}" class="nav-link login-button">Log in</a>
+								@endauth
 							</li>
 							<li class="nav-item">
 								<a class="nav-link text-white add-button" href="ad-listing.html"><i class="fa fa-plus-circle"></i> Add Listing</a>

@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class MemberController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('admin.login');
+        return view('admin.dashboard');
     }
 
     /**
@@ -22,10 +22,10 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function login()
+    /*public function login()
     {
         return view('admin.login');
-    }
+    }*/
 
     /**
      * Show the form for creating a new resource.
@@ -56,7 +56,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        return view('admin.dashboard');
+        
     }
 
     /**
