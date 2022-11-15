@@ -9,10 +9,10 @@
 
         @include('layouts.navigation')
 
-        {{ $slot }}
+       @yield('content')
 
         @include('layouts.footer')
 
     </body>
 
-</html>
+</html>/posts/{post}/comments/{comment}
