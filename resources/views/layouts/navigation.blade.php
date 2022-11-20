@@ -88,7 +88,7 @@
 								@endauth
 							</li>
 							<li class="nav-item">
-								<a class="nav-link text-white add-button" href="ad-listing.html"><i class="fa fa-plus-circle"></i> Add Listing</a>
+								<a class="nav-link text-white add-button" href="{{ route('annonces.index') }}"><i class="fa fa-plus-circle"></i> Add Listing</a>
 							</li>
 						</ul>
 					</div>

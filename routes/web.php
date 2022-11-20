@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\AdsController;
+use App\Http\Controllers\UsersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,10 +17,13 @@ use App\Http\Controllers\FrontController;
 */
 
 Route::resource('/', FrontController::class);
+Route::resource('/annonces', AdsController::class);
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profil', [UsersController::class, 'index'])
+                ->name('profil');
+});
 
 require __DIR__.'/auth.php';
 require __DIR__.'/members.php';
