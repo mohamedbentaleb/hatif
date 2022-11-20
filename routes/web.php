@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FicheController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\AdsController;
@@ -16,6 +17,8 @@ use App\Http\Controllers\UsersController;
 |
 */
 
+
+
 Route::resource('/', FrontController::class);
 Route::resource('/annonces', AdsController::class);
 
@@ -25,5 +28,20 @@ Route::middleware('auth')->group(function () {
                 ->name('profil');
 });
 
+ 
+
+
+
 require __DIR__.'/auth.php';
 require __DIR__.'/members.php';
+
+
+
+// fiche technique
+Route::prefix('fiche')->group(function () {
+    Route::name('fiche.')->group(function () {
+        Route::get('/marques', [FicheController::class, 'marques'])->name("marques");
+        Route::get('/marques/{marque}/modeles', [FicheController::class, 'modeles'])->name("modeles");
+    });
+});
+ 
