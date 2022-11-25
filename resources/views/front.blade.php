@@ -1,4 +1,8 @@
-<x-app-layout>
+@extends('layouts.app')
+
+@section('title', 'Hatif')
+
+@section('content')
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             hatif
@@ -415,4 +419,4 @@
     	</div>
     	<!-- Container End -->
     </section>
-</x-app-layout>
+@endsection

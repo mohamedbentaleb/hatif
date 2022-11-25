@@ -9,8 +9,7 @@
 
         @include('layouts.navigation')
 
-        {{ $slot }}
-       <!--@yield('content')--->
+        @yield('content')
 
         @include('layouts.footer')
 
