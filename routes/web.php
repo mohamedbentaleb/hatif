@@ -41,7 +41,8 @@ require __DIR__.'/members.php';
 Route::prefix('fiche')->group(function () {
     Route::name('fiche.')->group(function () {
         Route::get('/marques', [FicheController::class, 'marques'])->name("marques");
-        Route::get('/marques/{marque}/modeles', [FicheController::class, 'modeles'])->name("modeles");
+        Route::get('/{marque}/modeles', [FicheController::class, 'modeles'])->name("modeles");
+        Route::get('/{marque}/{modele}/detail', [FicheController::class, 'detail'])->name("fichetechnique");
     });
 });
  

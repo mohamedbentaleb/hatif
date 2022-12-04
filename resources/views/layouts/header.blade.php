@@ -2,7 +2,7 @@
 
   <!-- ** Basic Page Needs ** -->
   <meta charset="utf-8">
-  <title>Classimax | Classified Marketplace Template</title>
+  <title>      @yield('title')</title>
 
   <!-- ** Mobile Specific Metas ** -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">

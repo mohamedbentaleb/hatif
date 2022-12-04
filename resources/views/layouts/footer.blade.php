@@ -8,21 +8,20 @@
           <!-- footer logo -->
           <img src="{{ asset('front/images/logo-footer.png') }}" alt="logo">
           <!-- description -->
-          <p class="alt-color">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p class="alt-color">le support de fiches techniques de telephones portables.</p>
         </div>
       </div>
       <!-- Link list -->
       <div class="col-lg-2 offset-lg-1 col-md-3 col-6 mb-4 mb-lg-0">
         <div class="block">
-          <h4>Site Pages</h4>
+          <h4>Les fiches techniques</h4>
           <ul>
-            <li><a href="dashboard-my-ads.html">My Ads</a></li>
-            <li><a href="dashboard-favourite-ads.html">Favourite Ads</a></li>
-            <li><a href="dashboard-archived-ads.html">Archived Ads</a></li>
-            <li><a href="dashboard-pending-ads.html">Pending Ads</a></li>
-            <li><a href="terms-condition.html">Terms & Conditions</a></li>
+            <li><a href="{{ route('fiche.modeles' , ['marque' => 'apple' ] ) }}">Apple</a></li>
+            <li><a href="{{ route('fiche.modeles' , ['marque' => 'samsung' ] ) }}">Samsung</a></li>
+            <li><a href="{{ route('fiche.modeles' , ['marque' => 'xiaomi' ] ) }}">Xiaomi</a></li>
+            <li><a href="{{ route('fiche.modeles' , ['marque' => 'oppo' ] ) }}">Oppo</a></li>
+            <li><a href="{{ route('fiche.modeles' , ['marque' => 'sonny' ] ) }}">Sonny</a></li>
+            
           </ul>
         </div>
       </div>
@@ -75,7 +74,7 @@
           <p>Copyright &copy; <script>
               var CurrentYear = new Date().getFullYear()
               document.write(CurrentYear)
-            </script>. Designed & Developed by <a class="text-white" href="https://themefisher.com">Themefisher</a></p>
+            </script>. Hatif.ma</p>
         </div>
       </div>
       <div class="col-lg-6">

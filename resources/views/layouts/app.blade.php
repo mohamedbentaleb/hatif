@@ -9,10 +9,12 @@
 
         @include('layouts.navigation')
 
-        @yield('content')
-
+        <div class="container">
+             @yield('content')
+        </div>
+        
         @include('layouts.footer')
 
     </body>
 
-</html>/posts/{post}/comments/{comment}
+</html>

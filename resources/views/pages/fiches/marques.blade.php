@@ -9,23 +9,27 @@
 @section('content')
  
 <div class="row" >
-    @foreach ($fiches as $d)
-        
-
     
-    <div class="col-sm-6" >
-        <div class="card" >
-            <a href="{{ route('fiche.modeles' , ['marque' => $d['title'] ] ) }}">
-                <img   src="{{ asset('logo/'.$d["logo"]) }}" alt="{{  $d["title"]; }}" title="{{  $d["title"]; }}"  width="250px;">
-                <div class="card-body">
-                <h5 class="card-title">{{  $d["title"]; }}</h5>
+    <div class="col-8" >
+        <div class="row" >
+            @foreach ($marques as $d)
+                    
+            <div class="col-3" >
+                <div class="card" >
+                    <a href="{{ route('fiche.modeles' , ['marque' => strtolower($d['title']) ] ) }}">
+                        <img   src="{{ asset('assets/marques/'.$d["logo"]) }}" alt="{{  $d["title"]; }}" title="{{  $d["title"]; }}"  width="250px;">
+                        <div class="card-body">
+                        <h5 class="card-title">{{  $d["title"]; }}</h5>
+                        </div>
+                    </a>
                 </div>
-            </a>
-        </div>
+            </div>
+            @endforeach        
+        </div>       
     </div>
 
-
-    @endforeach
+    <div class="col-4" >
+    </div>
 </div>
    
 @endsection
