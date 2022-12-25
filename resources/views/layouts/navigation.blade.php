@@ -15,7 +15,10 @@
 							<li class="nav-item active">
 								<a class="nav-link" href="{{ route('index') }}">Home</a>
 							</li>
-							<li class="nav-item dropdown dropdown-slide @@dashboard">
+							<li class="nav-item @@listing">
+								<a class="nav-link" href="{{ route('annonces.list') }}">Listing</a>
+							</li>
+							<li class="nav-item dropdown dropdown-slide @@dashboard d-none">
 								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#!">Dashboard<span><i class="fa fa-angle-down"></i></span>
 								</a>
 
@@ -37,7 +40,7 @@
 									</li>
 								</ul>
 							</li>
-							<li class="nav-item dropdown dropdown-slide @@pages">
+							<li class="nav-item dropdown dropdown-slide @@pages d-none">
 								<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 									Pages <span><i class="fa fa-angle-down"></i></span>
 								</a>
@@ -55,7 +58,7 @@
 									<li><a class="dropdown-item @@terms" href="terms-condition.html">Terms &amp; Conditions</a></li>
 								</ul>
 							</li>
-							<li class="nav-item dropdown dropdown-slide @@listing">
+							<li class="nav-item dropdown dropdown-slide @@listing d-none">
 								<a class="nav-link dropdown-toggle" href="#!" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 									Listing <span><i class="fa fa-angle-down"></i></span>
 								</a>
@@ -64,7 +67,7 @@
 									<li><a class="dropdown-item @@category" href="category.html">Ad-Gird View</a></li>
 									<li><a class="dropdown-item @@listView" href="ad-list-view.html">Ad-List View</a></li>
 
-									<li class="dropdown dropdown-submenu dropleft">
+									<li class="dropdown dropdown-submenu dropleft ">
 										<a class="dropdown-item dropdown-toggle" href="#!" id="dropdown0201" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sub Menu</a>
 
 										<ul class="dropdown-menu" aria-labelledby="dropdown0201">
