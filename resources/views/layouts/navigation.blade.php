@@ -18,6 +18,9 @@
 							<li class="nav-item @@listing">
 								<a class="nav-link" href="{{ route('annonces.list') }}">Listing</a>
 							</li>
+							<li class="nav-item @@Marque">
+								<a class="nav-link" href="{{ route('fiche.marques') }}">Marque</a>
+							</li>
 							<li class="nav-item dropdown dropdown-slide @@dashboard d-none">
 								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#!">Dashboard<span><i class="fa fa-angle-down"></i></span>
 								</a>

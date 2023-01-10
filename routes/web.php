@@ -18,14 +18,11 @@ use App\Http\Controllers\UsersController;
 */
 
 
-
 Route::resource('/', FrontController::class);
-Route::get('/annonces', [AdsController::class, 'index'])
-                ->name('annonces.index');
-Route::get('/annonces/list', [AdsController::class, 'list'])
-                ->name('annonces.list');
-Route::get('/annonces/detail', [AdsController::class, 'detail'])
-                ->name('annonces.detail');
+Route::get('/annonces', [AdsController::class, 'index'])->name('annonces.index');
+Route::post('/annonces', [AdsController::class, 'store'])->name('annonces.store');
+Route::get('/annonces/list', [AdsController::class, 'list'])->name('annonces.list');
+Route::get('/annonces/detail', [AdsController::class, 'detail'])->name('annonces.detail');
 
 
 Route::middleware('auth')->group(function () {

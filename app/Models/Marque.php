@@ -12,7 +12,7 @@ class Marque extends Model
     use SoftDeletes;
 
 
-    protected $dates = ['deleted_at'];
+    //protected $dates = ['deleted_at'];
 
     public function modeles(){
         return $this->hasMany('App\Modele');
